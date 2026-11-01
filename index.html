@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CRAVEWORKS</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #050505;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+.brand {
+    font-family: "Times New Roman", serif;
+    font-size: 52px;
+    letter-spacing: 8px;
+    margin-bottom: 45px;
+}
+
+.subtitle {
+    font-size: 15px;
+    letter-spacing: 4px;
+    color: #d0d0d0;
+    margin-bottom: 18px;
+}
+
+.originals {
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 55px;
+}
+
+.shop {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    padding: 14px 55px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 4px;
+    transition: 0.4s;
+}
+
+.shop:hover {
+    background: white;
+    color: black;
+}
+
+.links {
+    margin-top: 45px;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:600px){
+
+.brand {
+    font-size: 36px;
+    letter-spacing: 5px;
+}
+
+.subtitle {
+    font-size: 12px;
+}
+
+.originals {
+    font-size: 14px;
+}
+
+.shop {
+    padding: 13px 45px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="brand">
+CRAVEWORKS
+</div>
+
+<div class="subtitle">
+genuine craftsmanship
+</div>
+
+<div class="originals">
+CRAVEWORKS Originals
+</div>
+
+
+<a class="shop" href="https://smartstore.naver.com/">
+SHOP
+</a>
+
+
+<div class="links">
+<a href="#">Instagram</a>
+<a href="#">Contact</a>
+</div>
+
+</div>
+
+</body>
+</html>

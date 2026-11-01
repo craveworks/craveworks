@@ -6,7 +6,12 @@
 
 <title>CRAVEWORKS</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -15,129 +20,241 @@
 
 body {
     height: 100vh;
-    background: #050505;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family: 'Inter', sans-serif;
 }
+
 
 .container {
-    text-align: center;
+
+    text-align:center;
+
     animation: fadeIn 2s ease;
+
 }
 
-.brand {
-    font-family: "Times New Roman", serif;
-    font-size: 52px;
-    letter-spacing: 8px;
-    margin-bottom: 45px;
+
+/* 로고 들어갈 자리 */
+
+.logo {
+
+    margin-bottom:55px;
+
 }
+
+
+.logo img {
+
+    width:260px;
+    max-width:70vw;
+
+}
+
+
+/* 임시 로고 텍스트 */
+
+.logo-text {
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:52px;
+
+    letter-spacing:8px;
+
+}
+
 
 .subtitle {
-    font-size: 15px;
-    letter-spacing: 4px;
-    color: #d0d0d0;
-    margin-bottom: 18px;
+
+    font-size:14px;
+
+    letter-spacing:5px;
+
+    font-weight:300;
+
+    margin-bottom:25px;
+
 }
+
 
 .originals {
-    font-size: 18px;
-    letter-spacing: 5px;
-    margin-bottom: 55px;
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:26px;
+
+    letter-spacing:4px;
+
+    margin-bottom:60px;
+
 }
+
 
 .shop {
-    display: inline-block;
-    border: 1px solid #ffffff;
-    padding: 14px 55px;
-    color: white;
-    text-decoration: none;
-    letter-spacing: 4px;
-    transition: 0.4s;
+
+    display:inline-block;
+
+    border:1px solid white;
+
+    padding:15px 70px;
+
+    color:white;
+
+    text-decoration:none;
+
+    letter-spacing:5px;
+
+    font-size:13px;
+
+    transition:0.4s;
+
 }
+
 
 .shop:hover {
-    background: white;
-    color: black;
+
+    background:white;
+
+    color:black;
+
 }
+
 
 .links {
-    margin-top: 45px;
-    font-size: 13px;
-    letter-spacing: 3px;
+
+    margin-top:45px;
+
 }
+
 
 .links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:0 18px;
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
 }
 
+
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+from {
+
+opacity:0;
+transform:translateY(20px);
+
 }
+
+to {
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
 
 @media(max-width:600px){
 
-.brand {
-    font-size: 36px;
-    letter-spacing: 5px;
+.logo-text {
+
+font-size:36px;
+
+letter-spacing:5px;
+
 }
+
 
 .subtitle {
-    font-size: 12px;
+
+font-size:11px;
+
 }
+
 
 .originals {
-    font-size: 14px;
+
+font-size:20px;
+
 }
+
 
 .shop {
-    padding: 13px 45px;
+
+padding:14px 50px;
+
 }
 
 }
+
 </style>
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
-<div class="brand">
+
+<div class="logo">
+
+<div class="logo-text">
 CRAVEWORKS
 </div>
+
+</div>
+
 
 <div class="subtitle">
 genuine craftsmanship
 </div>
+
 
 <div class="originals">
 CRAVEWORKS Originals
 </div>
 
 
-<a class="shop" href="https://smartstore.naver.com/">
+<a class="shop" href="https://smartstore.naver.com/" >
 SHOP
 </a>
 
 
 <div class="links">
+
 <a href="#">Instagram</a>
+
 <a href="#">Contact</a>
-</div>
 
 </div>
+
+
+</div>
+
 
 </body>
 </html>

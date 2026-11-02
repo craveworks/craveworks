@@ -18,7 +18,6 @@
     box-sizing:border-box;
 }
 
-
 html,body{
 
     width:100%;
@@ -29,7 +28,7 @@ html,body{
 }
 
 
-/* 전체 배경 */
+/* 배경 */
 
 body{
 
@@ -42,7 +41,7 @@ body{
 }
 
 
-/* 움직이는 배경 */
+/* 배경 이미지 */
 
 .background{
 
@@ -50,7 +49,10 @@ body{
 
     inset:-5%;
 
-    background:url("background.jpg") center right / cover no-repeat;
+
+    /* 위치 수정 */
+    background:url("background.jpg") 65% center / cover no-repeat;
+
 
     animation:zoomBackground 18s ease-in-out infinite alternate;
 
@@ -59,7 +61,7 @@ body{
 }
 
 
-/* 배경 확대 효과 */
+/* 천천히 확대 */
 
 @keyframes zoomBackground{
 
@@ -78,7 +80,7 @@ body{
 }
 
 
-/* 어두운 필터 */
+/* 어두운 레이어 */
 
 .background::after{
 
@@ -88,13 +90,13 @@ body{
 
     inset:0;
 
-    background:rgba(0,0,0,.38);
+    background:rgba(0,0,0,.35);
 
 }
 
 
 
-/* 메인 영역 */
+/* 전체 */
 
 .container{
 
@@ -102,9 +104,11 @@ body{
 
     z-index:2;
 
+
     width:100%;
 
     height:100vh;
+
 
     display:flex;
 
@@ -114,17 +118,23 @@ body{
 
 
 
+/* 콘텐츠 */
+
 .content{
 
     width:380px;
 
+
     margin-left:8%;
+
 
     display:flex;
 
     flex-direction:column;
 
+
     align-items:center;
+
 
     text-align:center;
 
@@ -134,7 +144,8 @@ body{
 }
 
 
-/* 전체 등장 */
+
+/* 등장 */
 
 @keyframes contentFade{
 
@@ -164,21 +175,24 @@ body{
 
     width:330px;
 
+
     display:block;
+
 
     margin-bottom:34px;
 
 
     opacity:0;
 
+
     animation:logoFade .8s ease forwards;
+
 
     animation-delay:.2s;
 
 }
 
 
-/* 로고 등장 */
 
 @keyframes logoFade{
 
@@ -189,6 +203,7 @@ body{
         transform:translateY(15px);
 
     }
+
 
     to{
 
@@ -208,16 +223,21 @@ body{
 
     color:white;
 
+
     font-family:'Montserrat',sans-serif;
 
+
     font-style:italic;
+
 
     font-weight:700;
 
 
     font-size:20px;
 
+
     letter-spacing:-0.5px;
+
 
     line-height:1.08;
 
@@ -228,14 +248,9 @@ body{
 
 
 
-/* STORE 버튼 */
+/* STORE */
 
 .store-btn{
-
-
-    position:relative;
-
-    overflow:hidden;
 
 
     display:inline-block;
@@ -249,17 +264,21 @@ body{
 
     color:white;
 
+
     text-decoration:none;
 
 
     font-family:'Montserrat',sans-serif;
 
+
     font-style:italic;
+
 
     font-weight:700;
 
 
     font-size:16px;
+
 
     letter-spacing:4px;
 
@@ -275,6 +294,7 @@ body{
 
     background:white;
 
+
     color:black;
 
 
@@ -289,7 +309,9 @@ body{
 
     display:flex;
 
+
     justify-content:center;
+
 
     gap:34px;
 
@@ -315,6 +337,7 @@ body{
 
     font-style:italic;
 
+
     font-weight:700;
 
 
@@ -333,9 +356,7 @@ body{
 
 .socials a:hover{
 
-
     opacity:.6;
-
 
 }
 
@@ -358,9 +379,7 @@ body{
 
 .container{
 
-
     justify-content:center;
-
 
 }
 
@@ -403,6 +422,7 @@ body{
 
     padding:13px 32px;
 
+
     font-size:15px;
 
 
@@ -423,7 +443,6 @@ body{
 
 
 </style>
-
 
 </head>
 

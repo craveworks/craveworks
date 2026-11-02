@@ -1,244 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CRAVEWORKS</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
-html,body{
-
-width:100%;
-height:100%;
-overflow:hidden;
-
-font-family:'Inter',sans-serif;
-color:white;
-
-}
-
-/* ---------- 배경 ---------- */
 
 body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
 
-background:url("background.jpg") no-repeat right center;
-background-size:cover;
-
-display:flex;
-justify-content:flex-start;
-align-items:center;
-
-animation:bgZoom 18s ease-in-out infinite alternate;
-
+    background:url("background2.jpg") center center/cover no-repeat;
+    font-family:Arial,sans-serif;
 }
 
 body::before{
-
-content:"";
-position:fixed;
-left:0;
-top:0;
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.35);
-
-z-index:-1;
-
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.25);
 }
-
-@keyframes bgZoom{
-
-from{
-
-background-size:100%;
-
-}
-
-to{
-
-background-size:104%;
-
-}
-
-}
-
-/* ---------- 내용 ---------- */
 
 .container{
+    position:relative;
+    z-index:2;
 
-margin-left:9%;
+    width:100%;
+    height:100vh;
 
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-
-animation:fadeUp 1.4s ease;
-
+    display:flex;
+    align-items:center;
 }
 
-@keyframes fadeUp{
+.content{
 
-from{
+    width:420px;
 
-opacity:0;
-transform:translateY(20px);
+    margin-left:8%;
 
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
 }
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-/* ---------- 로고 ---------- */
 
 .logo{
 
-width:430px;
-max-width:80vw;
+    width:360px;
 
-margin-bottom:22px;
+    display:block;
+
+    margin-bottom:42px;
 
 }
-
-/* ---------- 브랜드 문구 ---------- */
 
 .tagline{
 
-font-size:18px;
+    font-family:'Montserrat',sans-serif;
 
-font-weight:700;
+    font-style:italic;
 
-font-style:italic;
+    font-weight:700;
 
-letter-spacing:2px;
+    font-size:21px;
 
-line-height:1.08;
+    letter-spacing:-0.6px;
 
-margin-bottom:42px;
+    line-height:1.12;
 
-}
-
-/* ---------- 버튼 ---------- */
-
-.store{
-
-display:inline-block;
-
-padding:14px 40px;
-
-border:1px solid rgba(255,255,255,.85);
-
-text-decoration:none;
-
-color:white;
-
-font-size:13px;
-
-font-weight:700;
-
-font-style:italic;
-
-letter-spacing:5px;
-
-transition:.35s;
+    margin-bottom:48px;
 
 }
 
-.store:hover{
+.store-btn{
 
-background:white;
+    display:inline-block;
 
-color:black;
+    padding:16px 36px;
 
-}
+    border:1px solid rgba(255,255,255,.9);
 
-/* ---------- 하단 ---------- */
+    color:#fff;
 
-.links{
+    text-decoration:none;
 
-margin-top:34px;
+    font-family:'Montserrat',sans-serif;
 
-}
+    font-style:italic;
 
-.links a{
+    font-weight:700;
 
-color:white;
+    font-size:17px;
 
-text-decoration:none;
+    letter-spacing:4px;
 
-margin-right:26px;
-
-font-size:12px;
-
-font-style:italic;
-
-font-weight:700;
-
-letter-spacing:2px;
-
-transition:.3s;
+    transition:.35s;
 
 }
 
-.links a:hover{
+.store-btn:hover{
 
-opacity:.6;
+    background:white;
+
+    color:black;
 
 }
 
-/* ---------- 모바일 ---------- */
+.socials{
 
-@media(max-width:768px){
+    display:flex;
+
+    justify-content:center;
+
+    gap:38px;
+
+    margin-top:46px;
+
+}
+
+.socials a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-style:italic;
+
+    font-weight:700;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+
+}
+
+.socials a:hover{
+
+    opacity:.6;
+
+}
+
+@media(max-width:900px){
 
 body{
 
-background-position:70% center;
+background-position:75% center;
 
 }
 
-.container{
+.content{
 
-margin-left:30px;
-margin-right:30px;
+margin:auto;
+
+width:90%;
 
 }
 
 .logo{
 
-width:280px;
+width:270px;
 
 }
 
 .tagline{
+
+font-size:17px;
+
+}
+
+.store-btn{
+
+padding:14px 30px;
 
 font-size:15px;
 
 }
 
-.store{
+.socials{
 
-padding:13px 32px;
+gap:25px;
 
 }
 
@@ -252,7 +209,9 @@ padding:13px 32px;
 
 <div class="container">
 
-<img src="logo.png" class="logo">
+<div class="content">
+
+<img src="logo.png" class="logo" alt="CRAVEWORKS">
 
 <div class="tagline">
 
@@ -262,17 +221,19 @@ CRAVEWORKS Originals
 
 </div>
 
-<a class="store" href="https://smartstore.naver.com/여기에스토어주소">
+<a class="store-btn" href="https://smartstore.naver.com/크레이브웍스" target="_blank">
 
 STORE
 
 </a>
 
-<div class="links">
+<div class="socials">
 
-<a href="#">Instagram</a>
+<a href="https://instagram.com/계정명" target="_blank">Instagram</a>
 
-<a href="#">Contact</a>
+<a href="mailto:contact@craveworks.co.kr">Contact</a>
+
+</div>
 
 </div>
 

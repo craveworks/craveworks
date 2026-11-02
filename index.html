@@ -13,312 +13,279 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
+
 
 html,body{
 
-    width:100%;
-    height:100%;
-
-    overflow:hidden;
+width:100%;
+height:100%;
+overflow:hidden;
 
 }
 
-
-/* 배경 */
 
 body{
 
-    position:relative;
-
-    background:#000;
-
-    font-family:Arial,sans-serif;
+background:#000;
+font-family:Arial,sans-serif;
 
 }
 
 
-/* 배경 이미지 */
 
 .background{
 
-    position:absolute;
+position:absolute;
+inset:-5%;
 
-    inset:-5%;
+background:url("background.jpg") 65% center / cover no-repeat;
 
-    background:url("background.jpg") 65% center / cover no-repeat;
+animation:zoomBackground 18s ease-in-out infinite alternate;
 
-    animation:zoomBackground 18s ease-in-out infinite alternate;
-
-    z-index:0;
+z-index:0;
 
 }
 
 
-/* 배경 움직임 */
 
 @keyframes zoomBackground{
 
-    from{
+from{
+transform:scale(1);
+}
 
-        transform:scale(1);
-
-    }
-
-    to{
-
-        transform:scale(1.05);
-
-    }
+to{
+transform:scale(1.05);
+}
 
 }
 
 
-/* 배경 어둡기 */
 
 .background::after{
 
-    content:"";
+content:"";
 
-    position:absolute;
+position:absolute;
 
-    inset:0;
+inset:0;
 
-    background:rgba(0,0,0,.35);
+background:rgba(0,0,0,.35);
 
 }
 
 
 
-/* 전체 */
 
 .container{
 
-    position:relative;
+position:relative;
 
-    z-index:2;
+z-index:2;
 
-    width:100%;
+width:100%;
 
-    height:100vh;
+height:100vh;
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
 }
 
 
 
-/* 콘텐츠 */
 
 .content{
 
-    width:380px;
+width:380px;
 
-    margin-left:8%;
+margin-left:8%;
 
-    display:flex;
+display:flex;
 
-    flex-direction:column;
+flex-direction:column;
 
-    align-items:center;
+align-items:center;
 
-    text-align:center;
-
-    animation:contentFade 1.2s ease forwards;
+text-align:center;
 
 }
 
 
 
-/* 등장 */
-
-@keyframes contentFade{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(20px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-
-
-/* 로고 */
 
 .logo{
 
-    width:330px;
+width:330px;
 
-    display:block;
+margin-bottom:34px;
 
-    margin-bottom:34px;
+opacity:0;
 
-    opacity:0;
-
-    animation:logoFade .8s ease forwards;
-
-    animation-delay:.2s;
+animation:logoFade .8s forwards;
 
 }
+
 
 
 
 @keyframes logoFade{
 
-    from{
+from{
 
-        opacity:0;
+opacity:0;
+transform:translateY(15px);
 
-        transform:translateY(15px);
+}
 
-    }
+to{
 
-    to{
+opacity:1;
+transform:translateY(0);
 
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
+}
 
 }
 
 
 
-/* 문구 */
 
 .tagline{
 
-    color:white;
+color:white;
 
-    font-family:'Montserrat',sans-serif;
+font-family:'Montserrat',sans-serif;
 
-    font-style:italic;
+font-style:italic;
 
-    font-weight:700;
+font-weight:700;
 
-    font-size:20px;
+font-size:20px;
 
-    letter-spacing:-0.5px;
+letter-spacing:-0.5px;
 
-    line-height:1.08;
+line-height:1.08;
 
-    margin-bottom:42px;
+margin-bottom:42px;
 
 }
 
 
 
-/* SHOP 버튼 */
+/* SHOP 버튼 수정 */
 
 .store-btn{
 
-    display:inline-block;
 
-    padding:14px 38px;
+display:flex;
 
-    border:1px solid rgba(255,255,255,.9);
+justify-content:center;
 
-    color:white;
+align-items:center;
 
-    text-decoration:none;
 
-    font-family:'Montserrat',sans-serif;
+width:150px;
 
-    font-style:italic;
+height:48px;
 
-    font-weight:700;
 
-    font-size:16px;
+border:1px solid rgba(255,255,255,.9);
 
-    letter-spacing:4px;
 
-    transition:.5s;
+color:white;
+
+text-decoration:none;
+
+
+font-family:'Montserrat',sans-serif;
+
+font-style:italic;
+
+font-weight:700;
+
+
+font-size:16px;
+
+
+letter-spacing:3px;
+
+
+transition:.5s;
+
 
 }
+
 
 
 
 .store-btn:hover{
 
-    background:white;
+background:white;
 
-    color:black;
+color:black;
 
 }
 
 
 
-/* SNS */
 
 .socials{
 
-    display:flex;
 
-    justify-content:center;
+display:flex;
 
-    gap:34px;
+justify-content:center;
 
-    margin-top:40px;
+
+gap:34px;
+
+
+margin-top:40px;
 
 }
+
 
 
 .socials a{
 
-    color:white;
 
-    text-decoration:none;
+color:white;
 
-    font-family:'Montserrat',sans-serif;
-
-    font-style:italic;
-
-    font-weight:700;
-
-    font-size:14px;
-
-    letter-spacing:1px;
-
-    transition:.3s;
-
-}
+text-decoration:none;
 
 
-.socials a:hover{
+font-family:'Montserrat',sans-serif;
 
-    opacity:.6;
+font-style:italic;
+
+font-weight:700;
+
+
+font-size:14px;
+
+
+letter-spacing:1px;
+
 
 }
+
 
 
 
 /* 모바일 */
+
 
 @media(max-width:900px){
 
 
 .background{
 
-    background-position:65% center;
-
-    background-size:cover;
+background-position:65% center;
 
 }
 
@@ -326,7 +293,7 @@ body{
 
 .container{
 
-    justify-content:center;
+justify-content:center;
 
 }
 
@@ -334,11 +301,11 @@ body{
 
 .content{
 
-    margin:0;
+width:85%;
 
-    width:85%;
+margin:0;
 
-    transform:translateY(-20px);
+transform:translateY(-20px);
 
 }
 
@@ -346,9 +313,9 @@ body{
 
 .logo{
 
-    width:190px;
+width:190px;
 
-    margin-bottom:28px;
+margin-bottom:28px;
 
 }
 
@@ -356,11 +323,9 @@ body{
 
 .tagline{
 
-    font-size:15px;
+font-size:15px;
 
-    line-height:1.2;
-
-    margin-bottom:34px;
+margin-bottom:34px;
 
 }
 
@@ -368,9 +333,14 @@ body{
 
 .store-btn{
 
-    padding:12px 28px;
 
-    font-size:14px;
+width:130px;
+
+height:42px;
+
+
+font-size:14px;
+
 
 }
 
@@ -378,9 +348,9 @@ body{
 
 .socials{
 
-    gap:22px;
+gap:22px;
 
-    margin-top:32px;
+margin-top:32px;
 
 }
 
@@ -407,9 +377,7 @@ body{
 <div class="content">
 
 
-
-<img src="logo.png" class="logo" alt="CRAVEWORKS">
-
+<img src="logo.png" class="logo">
 
 
 <div class="tagline">
@@ -422,7 +390,7 @@ CRAVEWORKS Originals
 
 
 
-<a class="store-btn" href="https://mkt.shopping.naver.com/link/6818b9d3efd7a65d55474c24" target="_blank">
+<a class="store-btn" href="https://smartstore.naver.com/여기에스토어주소" target="_blank">
 
 SHOP
 
@@ -433,7 +401,7 @@ SHOP
 <div class="socials">
 
 
-<a href="https://instagram.com/craveworks_official" target="_blank">
+<a href="https://instagram.com/계정명">
 
 Instagram
 
@@ -450,14 +418,13 @@ Contact
 </div>
 
 
-
 </div>
 
 
 </div>
-
 
 
 </body>
+
 
 </html>
